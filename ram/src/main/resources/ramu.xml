@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+ xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<bean id="adr" class ="ram.Address2">
+<property name="strt" value="SBI colony" ></property>
+<property name="city" value="chittor" ></property>
+<property name="state" value="AP" ></property>
+</bean>
+<bean id="cst" class ="ram.doni">
+<property name="id" value="101" ></property>
+<property name="name" value="ramu" ></property>
+<property name="email" value="ramu@gmail.com" ></property>
+<property name="adr" ref ="adr"></property>
+</bean>
+<bean id="adr1" class ="ram.Address2">
+<constructor-arg name="strt" value="Ntrcolony" ></constructor-arg>
+<constructor-arg name="city" value="Tirupathi" ></constructor-arg>
+<constructor-arg name="state" value="AP" ></constructor-arg>
+</bean>
+<bean id="cst1" class ="ram.doni">
+<constructor-arg name="id" value="89" ></constructor-arg>
+<constructor-arg name="name" value="lakhmidevi" ></constructor-arg>
+<constructor-arg name="email" value="lakshmidevi@gmailcom" ></constructor-arg>
+<constructor-arg name="adr" ref="adr1"></constructor-arg>
+</bean>
+<bean id="adr2" class ="ram.Address2">
+<constructor-arg name="strt" value="andhi nagar colony" ></constructor-arg>
+<constructor-arg name="city" value="Bangloor" ></constructor-arg>
+<constructor-arg name="state" value="KA" ></constructor-arg>
+</bean>
+<bean id="cst2" class ="ram.doni">
+<constructor-arg name="id" value="0014" ></constructor-arg>
+<constructor-arg name="name" value="indra" ></constructor-arg>
+<constructor-arg name="email" value="indra@gmailcom" ></constructor-arg>
+<constructor-arg name="adr" ref="adr2"></constructor-arg>
+</bean>
+</beans>
